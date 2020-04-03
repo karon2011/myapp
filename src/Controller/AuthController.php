@@ -8,6 +8,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
@@ -82,8 +83,6 @@ class AuthController extends AbstractController
         //     'roles' => $user->getRoles(),
         // ]);
 
-        // return new Response(sprintf('User %s successfully created', $user->getUsername()));
-        // return new Response(sprintf('public function login'));
         return new JsonResponse($user,200);
     }
 }

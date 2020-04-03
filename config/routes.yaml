@@ -21,3 +21,19 @@ api_login_check:
 swagger_ui:
     path: /docs
     controller: api_platform.swagger.action.ui
+
+# api_authors:
+#     path: /api/authors
+#     controller: App\Controller\AuthorController::showAllAuthors
+
+api_create_author:
+    path: api/authors/new/edit
+    controller: App\Controller\AuthorController::createAuthor
+
+api_update_author:
+    path: api/authors/{id}/edit
+    controller: App\Controller\AuthorController::updateAuthor
+
+api_delete_author:
+    path: api/authors/{id}/delete
+    controller: App\Controller\AuthorController::deleteAuthor

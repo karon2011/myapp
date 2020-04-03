@@ -184,7 +184,7 @@ class User implements UserInterface
         ]);
     }
 
-        /**
+    /**
      * Constructs the object
      * @link https://php.net/manual/en/serializable.unserialize.php
      * @param string $serialized <p>
@@ -195,11 +195,13 @@ class User implements UserInterface
      */
     public function unserialize($serialized)
     {
-        list($this->id,
+        list(
+            $this->id,
             $this->username,
             $this->email,
             $this->firstname,
             $this->lastname,
-            $this->password) = unserialize($serialized, ['allowed_classes' => false]);
+            $this->password
+        ) = unserialize($serialized, ['allowed_classes' => false]);
     }
 }
